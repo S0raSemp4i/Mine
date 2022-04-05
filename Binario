@@ -1,0 +1,4 @@
+x = input("Introduzca el numero que quiere convertir a binario: ")
+x = int(x)
+
+print (bin(x))
