@@ -1,0 +1,98 @@
+import os
+
+def menu():
+
+    print("Seleccione una Opcion: \n")
+    print("  1 - Suma de Binarios. \n")
+    print("  2 - Resta de Binarios. \n")
+    print("  3 - Multiplicacion de Binarios. \n")
+    print("  4 - Division de Binarios. \n")
+    print("  5 - Convercion de Binario a Decimal. \n")
+    print("  6 - Convercion de Decimal a Binario. \n")
+
+while True:
+
+    menu()  
+
+    Opciones = input("Introduce el numero de la accion que desea realizar: \n")
+
+    if Opciones == "1":
+        os.system('cls')
+        x = input("Introduce el primer numero que desees: ")
+        y = input("Introduzca otro numero con el que desea hacer la operacion: ")
+
+        x = int(x)
+        y = int(y)
+
+        sum = bin(x + y)
+
+        print("El resultado de tu suma ne binario es igual a: ", sum)
+
+        Back1 = input("Inserte el numero dos para volver al menu: \n")
+
+        if Back1 == "2":
+            menu()
+
+    elif Opciones == "2":
+        os.system('cls')
+        a = input("Introduzca el primer numero: ")
+        b = input("Introduzca otro numero: ")
+
+        a = int(a)
+        b = int(b)
+
+        sum = bin(a - b)
+
+        print("La resta de estos dos numeros decimales en binarios es: ", sum)
+
+    elif Opciones == "3":
+        os.system('cls')
+        z = input("Introduzca un numero: ")
+        c = input("Introduzca otro numero: ")
+
+        z = int(z)
+        c = int(c)
+
+        sum = bin(z * c)
+
+        print("El resultado de la multiplicacion de esos dos Decimales en binarios es: ", sum)
+
+    elif Opciones == "4":
+        os.system('cls')
+        m = input("Introduzca un numero: ")
+        n = input("Introduzca otro numero: ")
+
+        m = int(m)
+        n = int(n)
+
+        sum = bin(m // n)
+
+        print("El resultado de la division de esos dos Decimales en binarios es: ", sum)
+
+    elif Opciones == "5":
+        os.system('cls')
+        def Binario_a_Decimal (binario):
+            posicion = 0
+            decimal = 0
+            binario = binario[::-1]
+            for digito in binario:
+                multiplicador = 2**posicion
+                decimal += int(digito) * multiplicador
+                posicion += 1
+            return decimal
+
+        binario = input("Ingresa un numero binario: ")
+        decimal = Binario_a_Decimal(binario)
+        print(decimal)
+
+    elif Opciones == "6":
+        os.system('cls')
+        x = input("Introduzca el numero que quiere convertir a binario: ")
+        x = int(x)
+
+        print (bin(x))
+    else:
+        break
+
+    input("Presione enter para continuar...")
+    os.system("cls")
