@@ -1,0 +1,430 @@
+using System;
+
+namespace Ejercicios2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool bandera = false;
+            int opt;
+
+            do
+            {
+
+                Console.WriteLine("-----EJERCICIOS-----");
+                Console.WriteLine("1 - Ejercicio 1");
+                Console.WriteLine("2 - Ejercicio 2");
+                Console.WriteLine("3 - Ejercicio 3");
+                Console.WriteLine("3.1 - Ejercicio 3.1");
+                Console.WriteLine("4 - Ejercicio 4");
+                Console.WriteLine("5 - Ejercicio 5");
+                Console.WriteLine("6 - Ejercicio 6");
+                Console.WriteLine("7 - Ejercicio 7");
+                Console.WriteLine("8 - Ejercicio 8");
+                Console.WriteLine("8 - Ejercicio 9");
+                Console.WriteLine("8 - Ejercicio 10");
+                Console.WriteLine("8 - Ejercicio 11");
+                Console.WriteLine("8 - Ejercicio 12");
+                Console.Write("Eliga una Opcion: ");
+                opt = Convert.ToInt32(Console.ReadLine());
+
+                switch (opt)
+                {
+                    case 1:
+                        Console.Clear();
+                        Ejercicio1();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        int x;
+                        int y;
+
+                        Console.WriteLine("Escriba un Numero: ");
+                        x = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Escriba otro numero: ");
+                        y = Convert.ToInt32(Console.ReadLine());
+
+                        int dovaina = x / y;
+                        int dovainaotrab = x % y;
+
+                        Console.WriteLine($"La Division da: {dovaina}");
+                        Console.WriteLine($"El resto da: {dovainaotrab}");
+                        break;
+                    case 32:
+                        Console.Clear();
+                        Ejercicio3punto2();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        Ejercicio3();
+                        break;
+                    case 4:
+                        Console.Clear();
+                        double milla = 1609.344;
+                        int m;
+
+                        Console.Write("Que cantidad de Metros desea convertir en Millas: ");
+                        m = Convert.ToInt32(Console.ReadLine());
+
+                        double total = m * milla;
+
+                        Console.WriteLine($"Esa cantidad de Metros en Millas son: {total}");
+
+                        break;
+                    case 5:
+                        Console.Clear();
+                        Ejercicio5();
+                        break;
+                    case 6:
+                        Console.Clear();
+                        Ejercicio6();
+                        break;
+                    case 7:
+                        Console.Clear();
+                        Ejercicio7();
+                        break;
+                    case 8:
+                        Console.Clear();
+                        Ejercicio8();
+                        break;
+                    case 9:
+                        Console.Clear();
+                        Ejercicio9();
+                        break;
+                    case 10:
+                        Console.Clear();
+                        Ejercicio10();
+                        break;
+                    case 11:
+                        Console.Clear();
+                        Ejercicio11();
+                        break;
+                    case 12:
+                        Console.Clear();
+                        Ejercicio12();
+                        break;
+                }
+
+            } while (bandera != false);
+
+            Console.ReadLine();
+        }
+
+        public static int Ejercicio1()
+        {
+            int a;
+            int b;
+            int res;
+
+            Console.WriteLine("Escribe un Numero: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Escribe otro Numero: ");
+            b = Convert.ToInt32(Console.ReadLine());
+
+            res = a * b;
+
+            Console.WriteLine($"El Resultado de dicha multiplicacion es: {res}");
+
+            return res;
+        }
+
+        public static int Ejercicio3punto2()
+        {
+            int a;
+            int b;
+            int c;
+            int sum;
+
+            Console.WriteLine("Escriba un Numero: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Escriba otro Numero: ");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Escriba otro mas Numero: ");
+            c = Convert.ToInt32(Console.ReadLine());
+
+            sum = a + b + c;
+
+            Console.WriteLine($"El Resultado es de: {sum}");
+            return sum;
+        }              
+        
+
+        public static int Ejercicio3()
+        {
+            int a;
+            int uno = 1;
+            int u;
+            int dos = 2;
+            int d;
+            int tres = 3;
+            int t;
+            int cuatro = 4;
+            int c;
+            int cinco = 5;
+            int cin;
+            int seis = 6;
+            int s;
+            int siete = 7;
+            int si;
+            int ocho = 8;
+            int o;
+            int nueve = 9;
+            int n;
+            int diez = 10;
+            int di;
+
+            Console.WriteLine("Escriba un Numero: ");
+            a = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"---TABLA DE MULTIPLICACION DEL: {a}---");
+
+            u = a * uno;
+            d = a * dos;
+            t = a * tres;
+            c = a * cuatro;
+            cin = a * cinco;
+            s = a * seis;
+            si = a * siete;
+            o = a * ocho;
+            n = a * nueve;
+            di = a * diez;
+
+            Console.WriteLine($"{a} * {uno} = {u}");
+            Console.WriteLine($"{a} * {dos} = {d}");
+            Console.WriteLine($"{a} * {tres} = {t}");
+            Console.WriteLine($"{a} * {cuatro} = {c}");
+            Console.WriteLine($"{a} * {cinco} = {cin}");
+            Console.WriteLine($"{a} * {seis} = {s}");
+            Console.WriteLine($"{a} * {siete} = {si}");
+            Console.WriteLine($"{a} * {ocho} = {o}");
+            Console.WriteLine($"{a} * {nueve} = {n}");
+            Console.WriteLine($"{a} * {diez} = {di}");
+
+
+            return a;
+        }
+
+        public static int Ejercicio5()
+        {
+            int a;
+
+            Console.WriteLine("Escriba un Numero y se determinara si es Par o Impar: ");
+            a = Convert.ToInt32(Console.ReadLine());
+
+            if (a % 2 == 0)
+            {
+                Console.WriteLine("El Numero Fue Determinado Par!");
+            }
+            else
+            {
+                Console.WriteLine("El Numero Fue Determinado Impar!");
+            }
+
+            return a;
+        }
+
+        public static int Ejercicio6()
+        {
+            int a;
+            int b;
+            int mayor;
+
+            Console.WriteLine("Escriba un Numero: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Escriba otro Numero: ");
+            b = Convert.ToInt32(Console.ReadLine());
+
+            if (a > b)
+            {
+                Console.WriteLine($"{a} Es Mayor que {b}");
+                mayor = a;
+            }
+            else
+            {
+                Console.WriteLine($"{b} Es Mayor que {a}");
+                mayor = b;
+            }
+
+            return mayor;
+        }
+
+        public static int Ejercicio7()
+        {
+            int a;
+            int b;
+            int mult;
+
+            Console.WriteLine("Escriba un Numero: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Escriba otro Numero: ");
+            b = Convert.ToInt32(Console.ReadLine());
+
+            if (a%b == 0)
+            {
+                Console.WriteLine($"{a} Es Multiplo de {b}");
+                mult = a;
+            }
+            else
+            {
+                Console.WriteLine($"{a} No Es Multiplo de {b}");
+                mult = a;
+            }
+            return mult;
+
+        }
+
+        public static int Ejercicio8()
+        {
+            int a;
+            int b;
+            int prodc;
+
+            Console.WriteLine("Escriba un Numero: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Escriba otro Numero: ");
+            b = Convert.ToInt32(Console.ReadLine());
+
+            if (a == 0 || b == 0)
+            {
+                Console.WriteLine("El Producto de 0 por cualquier numero es igual a 0!");
+                prodc = 0;
+            }
+            else
+            {
+                prodc = a * b;
+                Console.WriteLine($"El Producto de Estos Numeros es: {prodc}");
+            }
+
+            return prodc;
+
+        }
+
+        public static int Ejercicio9()
+        {
+            int a;
+            int b;
+            int div;
+
+            Console.WriteLine("Escriba un Numero: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Escriba otro Numero: ");
+            b = Convert.ToInt32(Console.ReadLine());
+
+            if (b == 0)
+            {
+                Console.WriteLine("ERROR: No se puede dividir entre cero!");
+                div = 0;
+            }
+            else
+            {
+                div = a / b;
+                Console.WriteLine($"El Resultado de esta Division es: {div}");
+            }
+
+            return div;
+        }
+
+        public static int Ejercicio10()
+        {
+            int a;
+            int b;
+            int pos;
+
+            Console.WriteLine("Escriba un Numero: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Escriba otro Numero: ");
+            b = Convert.ToInt32(Console.ReadLine());
+
+            if(a > 0 && b > 0)
+            {
+                Console.WriteLine("Los NUMERO son POSITIVOS");
+                pos = 0;
+            } else if(a < 0 && b > 0)
+            {
+                Console.WriteLine("Uno de los NUMEROS es POSITIVO");
+                pos = b;
+            } else if(a > 0 && b < 0)
+            {
+                Console.WriteLine("Uno de los NUMEROS es POSITIVO");
+                pos = a;
+            }
+            else
+            {
+                Console.WriteLine("Ninguno de los NUMEROS son POSITIVOS");
+                pos = 0;
+            }
+
+            return pos;
+        }
+
+        public static int Ejercicio11()
+        {
+            int a;
+            int b;
+            int c;
+
+            Console.WriteLine("Escriba un Numero: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Escriba otro Numero: ");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Escriba otro mas Numero: ");
+            c = Convert.ToInt32(Console.ReadLine());
+
+            if (a < b)
+            {
+                if (b < c)
+                {
+                    Console.WriteLine($"El Mayor es: {c}");
+                }
+                else
+                {
+                    Console.WriteLine($"El Mayor es: {b}");
+                }
+            }
+
+           
+            
+            else if (a > b)
+            {
+                if (a < c)
+                {
+                    Console.WriteLine($"El Mayor es: {c}");
+                }
+                else
+                {
+                    Console.WriteLine($"El Mayor es: {a}");
+                }
+            }
+            return a;
+
+        }
+
+        public static int Ejercicio12()
+        {
+            int a;
+            int b;
+            int res;
+
+            Console.WriteLine("Escriba un Numero: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Escriba otro Numero: ");
+            b = Convert.ToInt32(Console.ReadLine());
+
+            if (a > b)
+            {
+                Console.WriteLine($"{a} Es Mayor que {b}");
+                res = a % b;
+                Console.WriteLine($"Y la Diferencia entre estos dos Numeros es de: {res}");
+            }
+            else
+            {
+                Console.WriteLine($"{b} Es Mayor que {a}");
+                res = b % a;
+                Console.WriteLine($"Y la Diferencia entre estos dos Numeros es de: {res}");
+            }
+
+            return res;
+        }
+    }
+}
