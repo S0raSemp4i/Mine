@@ -82,6 +82,10 @@ namespace Metodos
                         Console.Clear();
                         etrin.space();
                         break;
+                    case 11:
+                        Console.Clear();
+                        logico.primo();
+                        break;
                 }
 
             } while (bandera != false);
