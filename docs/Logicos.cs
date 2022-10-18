@@ -62,5 +62,31 @@ namespace Metodos
 
             return impar;
         }
+        
+         public int primo()
+        {
+            int a = 0, num;
+            Console.WriteLine("Escribe un numero: ");
+            num = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i < (num + 1); i++)
+            {
+                if (num % i == 0)
+                {
+                    a++;
+                }
+            }
+            if (a != 2)
+            {
+                Console.WriteLine(num + " No es primo");
+            }
+            else
+            {
+                Console.WriteLine(num + " Si es primo");
+            }
+
+            Console.ReadKey();
+
+            return a;
+        }
     }
 }
